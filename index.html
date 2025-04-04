@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yassin Mzouri | Cybersecurity</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2A5C7D;
+            --secondary: #FF6B6B;
+            --accent: #4ECDC4;
+            --text: #2D3436;
+            --background: #F9F9F9;
+            --card-bg: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--card-bg);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
+        main {
+            margin-top: 80px;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 80px auto 0;
+        }
+
+        .section {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Simplified Projects Section */
+        .projects-grid {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .project-card {
+            padding: 1.5rem;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            background: var(--card-bg);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .project-links {
+            margin-top: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: var(--secondary);
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        .cv-section {
+            text-align: center;
+            padding: 2rem;
+            background: var(--primary);
+            color: white;
+            border-radius: 10px;
+        }
+
+        .cv-btn {
+            background: var(--accent);
+            margin-top: 1.5rem;
+        }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 1rem;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem;
+            }
+            
+            nav {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="#" class="logo">YM</a>
+            <nav>
+                <a href="#projects">Projects</a>
+                <a href="#cv">CV</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>17-year-old cybersecurity student passionate about Python and secure system design.</p>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <p class="project-description">
+                        a valentine website to give ur gf
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/yassmz/valentine2" class="btn" target="_blank">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <p class="project-description">
+                       a Basic-gambling-game- in my starts
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/yassmz/Basic-gambling-game-" class="btn" target="_blank">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Add more projects by copying the above block -->
+
+            </div>
+        </section>
+
+        <section id="cv" class="section cv-section">
+            <h2>My Resume</h2>
+            <p>Download my CV to view my skills and experience</p>
+            <a href="path/to/your-cv.pdf" class="btn cv-btn" download>
+                <i class="fas fa-download"></i> Download CV
+            </a>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <form>
+                <input type="text" placeholder="Name" style="width: 100%; padding: 0.8rem; margin: 0.5rem 0;">
+                <input type="email" placeholder="Email" style="width: 100%; padding: 0.8rem; margin: 0.5rem 0;">
+                <textarea placeholder="Message" style="width: 100%; padding: 0.8rem; margin: 0.5rem 0;"></textarea>
+                <button type="submit" class="btn">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/yassmz"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/yass-m-6b3583351/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/y.____.mz.7/?next=%2F"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p style="margin-top: 1rem;">© 2025 Yassin Mzouri</p>
+    </footer>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Section animations
+        const sections = document.querySelectorAll('.section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
